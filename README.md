@@ -47,6 +47,7 @@ OR simply open `dist/index.html` in your browser.
 #### Further details
 
 - [Using `autotrace` to vectorize images](http://autotrace.sourceforge.net/index.html#download)
+- [`potrace` -- maintained `autotrace` alternative](http://potrace.sourceforge.net/#example)
 - [Mesh repair software](http://www.meshrepair.org/)
 - [Using MeshLabServer to fix STLs](https://sourceforge.net/p/meshlab/discussion/499532/thread/ee1fb697/?limit=25)
 
