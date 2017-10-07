@@ -1,4 +1,4 @@
-# ezphototrace
+# ezPhotoTrace
 
 **Trace photos, export STLs.**
 
