@@ -24,7 +24,7 @@ yarn
 yarn start
 ```
 
-OR simply open index.html in your browser.
+OR simply open `dist/index.html` in your browser.
 
 ## Typical workflow
 
@@ -40,5 +40,10 @@ OR simply open index.html in your browser.
 
 5. Load into [Cura](https://ultimaker.com/en/products/cura-software) and slice it into gcode
     ![vectorize](5.png)
+
+#### Further details
+
+- [Mesh repair software](http://www.meshrepair.org/)
+- [Using MeshLabServer to fix STLs](https://sourceforge.net/p/meshlab/discussion/499532/thread/ee1fb697/?limit=25)
 
 ### MIT Licensed
