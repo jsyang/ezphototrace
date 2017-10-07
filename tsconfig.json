@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+      "skipLibCheck": true,
+      "target": "es5",
+      "module": "commonjs",
+      // Use strict for future-proofing and performance benefits
+      // http://stackoverflow.com/a/31395185
+      "alwaysStrict": true,
+      "removeComments": false,
+      "moduleResolution": "node",
+      "allowJs": true,
+      "jsx": "react",
+      "lib": [
+        "es2017.object",
+        "es6",
+        "es7",
+        "dom",
+        "es5"
+      ],
+      "noUnusedLocals": true,
+      "strictNullChecks": true
+    },
+    "include": [
+      "src/**/*"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }
