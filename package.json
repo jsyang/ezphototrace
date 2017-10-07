@@ -23,7 +23,6 @@
     "@types/webpack-env": "^1.13.0",
     "aphrodite": "^1.2.1",
     "awesome-typescript-loader": "^3.2.3",
-    "babel-minify-webpack-plugin": "^0.2.0",
     "express": "^4.15.3",
     "preact": "^8.1.0",
     "preact-compat": "^3.16.0",

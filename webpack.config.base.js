@@ -1,24 +1,18 @@
-const path               = require('path');
-const webpack            = require('webpack');
+const path            = require('path');
+const webpack         = require('webpack');
 const {CheckerPlugin} = require('awesome-typescript-loader');
-const MinifyPlugin = require('babel-minify-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
-
-const devtool = isProd ?
-    'source-map' : 'inline-eval-cheap-source-map';
 
 const plugins = [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new CheckerPlugin(),
-    new MinifyPlugin({},{comments:false})
+    new CheckerPlugin()
 ];
 
-module.exports = {
+const EXPORTS = {
     cache:   true,
-    devtool: devtool,
 
     output: {
         path: path.resolve(__dirname,'dist')
@@ -57,3 +51,11 @@ module.exports = {
         fs: "empty"
     }
 };
+
+if(isProd) {
+    EXPORTS.devtool = 'hidden-source-map';
+} else {
+    EXPORTS.devtool = 'inline-eval-cheap-source-map';
+}
+
+module.exports = EXPORTS;
