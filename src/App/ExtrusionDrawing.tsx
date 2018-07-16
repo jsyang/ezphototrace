@@ -89,7 +89,7 @@ export default class ExtrusionDrawer extends React.PureComponent<any, any> {
         this.ctx.strokeStyle = color;
         polyLine.forEach(this.drawLine);
         this.ctx.stroke();
-    }
+    };
 
     redraw = () => {
         this.clearDrawing();

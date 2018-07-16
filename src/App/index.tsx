@@ -7,7 +7,7 @@ import STLViewer from './STLViewer';
 import ExtrusionDrawing from './ExtrusionDrawing';
 import BackgroundImage from './BackgroundImage';
 import polyLineToSTL from './polyLineToSTL';
-import ToolBar from './ToolBar';
+import MenuBar from './MenuBar';
 
 const styles: any = StyleSheet.create({
     page: STYLES.POSITIONING.FILL_PARENT,
@@ -81,12 +81,7 @@ export default class App extends React.PureComponent<any,any> {
             });
     };
 
-    renderClassNames = () => ({
-        page: css(styles.page),
-        container: css(styles.container)
-    });
-
-    // Extrusion Drawing 
+    // Extrusion Drawing
 
     onClickModeExtrusionDrawing = () => {
         this.extrusionDrawing.focus();
@@ -149,10 +144,7 @@ export default class App extends React.PureComponent<any,any> {
 
         return (
             <div className={css(styles.page)}>
-                <ToolBar {...{
-                    parent: this as any,
-                    mode
-                }} />
+                <MenuBar app={this}/>
 
                 <div className={css(styles.container)}>
 

@@ -12,8 +12,19 @@ Useful for adding extruded features to 3D prints. Written originally as part of 
 
 ### todo
 
+#### Exports
+- export SVG only
+- export as openSCAD module
+
+#### Shapes
+- redefine shape origin (auto-compute the centroid or set it manually)
+- distance measurement between 2 points
 - define the height of extrusions
-- resize the tracings based on a known measurement
+- resize the tracings based on a known measurement (e.g. distance between these two points is known to be 150mm, resize everything else to fit this)
+- rotate shape so edge lies flat
+
+#### Targets
+- macOS, windows, linux support via Proton Native
 
 ## Getting started
 
