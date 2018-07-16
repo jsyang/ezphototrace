@@ -28,5 +28,25 @@ module.exports = [
                 }
             })
         ]
+    }, baseConfig),
+    webpackConfigAssign({
+        name: 'electronApp',
+        target: 'electron-main',
+        entry: {
+            electronApp: './src/electronApp.ts',
+        },
+        output: {
+            publicPath: '/dist',
+            filename: '[name].js'
+        },
+        plugins: [
+            new webpack.optimize.CommonsChunkPlugin({
+                name: 'vendor',
+                minChunks: function (module) {
+                    // https://webpack.js.org/guides/code-splitting-libraries/#implicit-common-vendor-chunk
+                    return module.context && module.context.indexOf('node_modules') !== -1;
+                }
+            })
+        ]
     }, baseConfig)
 ];
